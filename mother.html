@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMama - Mother Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="firebase.js"></script>
+</head>
+<body>
+    <header>
+        <h1>NutriMama - Mother Dashboard</h1>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section id="subscriptionSection">
+        <h2>Subscribe for Food Delivery</h2>
+        <form id="subscriptionForm">
+            <label for="plan">Choose Plan:</label>
+            <select id="plan" required>
+                <option value="">--Select Plan--</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="subscriptionStatus"></div>
+    </section>
+
+    <section id="foodEntrySection">
+        <h2>Enter Foods You Ate Today</h2>
+        <form id="foodEntryForm">
+            <label for="foods">List your foods (comma separated):</label>
+            <input type="text" id="foods" placeholder="e.g., beans, maize, spinach" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="foodEntryStatus"></div>
+    </section>
+
+    <section id="alertsSection">
+        <h2>Alerts</h2>
+        <div id="alerts"></div>
+    </section>
+
+    <script src="mother.js"></script>
+</body>
+</html>
