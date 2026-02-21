@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CHW Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>Community Health Worker Dashboard</h1>
+
+<div class="card">
+  <h3>High Risk Mothers</h3>
+  <p id="risk">0</p>
+</div>
+
+<div class="card">
+  <h3>Pending Visits</h3>
+  <p id="visits">0</p>
+</div>
+
+<div class="card">
+  <h3>Nutrition Alerts</h3>
+  <p id="alerts">None</p>
+</div>
+
+<button onclick="simulateCHW()">Simulate Alerts</button>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBr9war4TX6q1b1l-7gJOI0t9u9ttk2J8Y",
+  authDomain: "nutrimama-5eafe.firebaseapp.com",
+  projectId: "nutrimama-5eafe",
+  storageBucket: "nutrimama-5eafe.firebasestorage.app",
+  messagingSenderId: "266621177472",
+  appId: "1:266621177472:web:baa4826ff13674a9952065",
+  measurementId: "G-Y16P9QBWFF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+<!-- Firebase App (Core) -->
+<script src="https://www.gstatic.com/firebasejs/11.16.0/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/11.16.0/firebase-auth.js"></script>
+
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/11.16.0/firebase-firestore.js"></script>
