@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriMama</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>NutriMama - Pregnancy Nutrition App</h1>
+
+  <!-- Authentication -->
+  <div id="auth">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="signup">Sign Up</button>
+    <button id="login">Login</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" style="display:none;">
+    <h2>Welcome, <span id="userName"></span></h2>
+
+    <!-- Subscription -->
+    <div>
+      <h3>Subscribe for Food Delivery</h3>
+      <select id="subscriptionPlan">
+        <option value="week">1 Week</option>
+        <option value="month">1 Month</option>
+      </select>
+      <button id="subscribe">Subscribe</button>
+    </div>
+
+    <!-- Food tracking -->
+    <div>
+      <h3>Enter Daily Foods</h3>
+      <input type="text" id="foodEntry" placeholder="e.g., Beans, Milk, Leafy veggies">
+      <button id="addFood">Add</button>
+      <ul id="foodList"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
